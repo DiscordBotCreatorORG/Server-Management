@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@types/node": "^22.10.5",
-    "discord.js": "^14.17.3"
-  }
-}
