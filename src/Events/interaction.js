@@ -4,8 +4,8 @@ const fs = require("fs")
 
 module.exports = {
 
-    serial_id: 1,
-    type: discord.Events.ClientReady,
+    serial_id: 2,
+    type: discord.Events.InteractionCreate,
 
     async execute(client) {
         if (!(client instanceof discord.Client)) return;

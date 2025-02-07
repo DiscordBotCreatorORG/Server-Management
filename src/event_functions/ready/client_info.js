@@ -5,7 +5,7 @@ module.exports = {
     async execute(client) {
 
         //check if the Client is an DiscordClient, when not then return and do nothing 
-        if (!(client instanceof Discord.Client)) return;
+        if (!(client instanceof discord.Client)) return;
 
         
         const client_info_fields = {

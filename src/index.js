@@ -2,10 +2,11 @@ const discord = require("discord.js")
 const env = require("dotenv").config()
 const fs = require("fs")
 const color_output = require("../modules/color_output")
-const { serial_id } = require("./Events/ready")
 
 //Create the CLient with all Permissions
 let client = new discord.Client({ intents: Object.values(discord.GatewayIntentBits) })
+
+
 
 //list all Event Files
 let event_files = fs.readdirSync("./src/Events").filter(file => file.endsWith(".js"))
@@ -18,6 +19,11 @@ for (const file of event_files) {
 
     client.on(event.type, (...args) => event.execute(...args))
 }
+
+
+
+
+
 
 client.login(process.env.TOKEN)
 .then(() => {
