@@ -1,14 +1,14 @@
 const discord = require("discord.js")
-
+discord.PermissionFlagsBits
 
 module.exports = {
     data: new discord.SlashCommandBuilder()
-        .setName("test")
-        .setDescription("Test"),
+        .setName("ping")
+        .setDescription("Api latency of the Bot"),
     
     
     async execute(interaction) {
-        if (!(interaction instanceof Discord.CommandInteraction)) return;
+        if (!(interaction instanceof discord.CommandInteraction)) return;
 
         interaction.reply(`Ping: ${interaction.client.ws.ping}ms`)
 

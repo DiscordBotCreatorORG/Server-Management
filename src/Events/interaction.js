@@ -7,20 +7,19 @@ module.exports = {
     serial_id: 2,
     type: discord.Events.InteractionCreate,
 
-    async execute(client) {
-        if (!(client instanceof discord.Client)) return;
+    async execute(interaction) {
+        if (!(interaction instanceof discord.ChatInputCommandInteraction)) return;
 
-        console.log("online")
+        
+        
+        const event_files = fs.readdirSync("./src/event_functions/interaction").filter(file => file.endsWith(".js"))
+        
 
-        const event_files = fs.readdirSync("./src/event_functions/ready").filter(file => file.endsWith(".js"))
-
-        for (const file of event_files) {
-
-            const event = require(`../event_functions/ready/${file}`)
+        const event = require(`../event_functions/interaction/ChatInputCommandInteraction.js`)
             
-            event.execute(client)
+        event.execute(interaction)
             
-        }
+        
     }
 
 }
