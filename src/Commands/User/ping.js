@@ -1,5 +1,5 @@
 const discord = require("discord.js")
-discord.PermissionFlagsBits
+let permissions = discord.PermissionFlagsBits
 
 module.exports = {
     data: new discord.SlashCommandBuilder()
