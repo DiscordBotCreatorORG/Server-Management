@@ -24,7 +24,6 @@ for (const file of event_files) {
 
 
 
-
 client.login(process.env.TOKEN)
 .then(() => {
     color_output( 
