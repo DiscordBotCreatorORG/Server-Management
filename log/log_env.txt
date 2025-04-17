@@ -1,0 +1,40 @@
+{
+    "WLAN": [
+        {
+            "address": "fe80::a2de:e4dd:856a:234e",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "family": "IPv6",
+            "mac": "de:24:bf:41:06:f2",
+            "internal": false,
+            "cidr": "fe80::a2de:e4dd:856a:234e/64",
+            "scopeid": 14
+        },
+        {
+            "address": "192.168.178.98",
+            "netmask": "255.255.255.0",
+            "family": "IPv4",
+            "mac": "de:24:bf:41:06:f2",
+            "internal": false,
+            "cidr": "192.168.178.98/24"
+        }
+    ],
+    "Loopback Pseudo-Interface 1": [
+        {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "family": "IPv6",
+            "mac": "00:00:00:00:00:00",
+            "internal": true,
+            "cidr": "::1/128",
+            "scopeid": 0
+        },
+        {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "family": "IPv4",
+            "mac": "00:00:00:00:00:00",
+            "internal": true,
+            "cidr": "127.0.0.1/8"
+        }
+    ]
+}

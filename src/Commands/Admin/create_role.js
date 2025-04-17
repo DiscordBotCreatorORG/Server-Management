@@ -12,5 +12,7 @@ module.exports = {
     
     async execute(interaction) {
         if (!(interaction instanceof discord.CommandInteraction)) return;
+
+        console.log(interaction.user.id)
     }
 }

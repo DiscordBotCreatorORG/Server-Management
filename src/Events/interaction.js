@@ -14,10 +14,15 @@ module.exports = {
         
         const event_files = fs.readdirSync("./src/event_functions/interaction").filter(file => file.endsWith(".js"))
         
+        for (const file of event_files) {
 
-        const event = require(`../event_functions/interaction/ChatInputCommandInteraction.js`)
+            const event = require(`../event_functions/interaction/${file}`)
+
+            event.execute(interaction)
+        }
+
             
-        event.execute(interaction)
+        
             
         
     }
